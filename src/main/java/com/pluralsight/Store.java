@@ -92,18 +92,20 @@ public class Store {
         if (answer.equalsIgnoreCase("yes")) {
             System.out.println("Enter Item id");
             String itemId = scanner.nextLine();
+            boolean found=false;
             for (Product product : inventory) {
                 if (product.getId().equals(itemId)) {
                     cart.add(product);
                     System.out.println("Product has been added to the cart!");
+                    found=true; 
                     break;
-                }else if (answer.equalsIgnoreCase("no")){
-                    System.out.println("Okay");
                 }
             }
         }else{
-            System.out.println("Item not Found");
+            System.out.println("Okay bye");
 
+        }else{
+            System.out.println("item not found");
         }
     }
 
