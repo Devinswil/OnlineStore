@@ -8,13 +8,21 @@ One of the main features of my application is that users have a constant reminde
 ## User Stories
 
 -As an owner I would like to be able to view all the inventory with the push of a button. This will make it easier for me to shop and see everything together.
+
 -As a user I would like to be able to see all the product information together easily and displayed. This will make it easy on the user to know what they are looking at.
+
 -As a user I would like to be able to add items to my cart once I have had the ability to look at all the products. This will allow me to view and shop at the same time.
+
 -As the user I would like all the items I want to be stored in one area, so I can have access to it.
+
 -As a user I would like to be able to see all the items I have added to my cart.
+
 -As a user I would like to be able to remove items from cart too if I change my mind on it.
+
 -As the user I would like to be able to search products by the Id just to make it easier to search.
+
 -As a user I would like to see the total cost of all the things I would like to buy to make it easier to budget.
+
 -As the owner I would like to ask user if they would like to confirm the purchase, so no accidental purchases are made.
 
 ## Setup
