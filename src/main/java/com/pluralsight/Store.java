@@ -92,28 +92,22 @@ public class Store {
         if (answer.equalsIgnoreCase("yes")) {
             System.out.println("Enter Item id");
             String itemId = scanner.nextLine();
-            boolean found=false;
+            boolean found = false;
             for (Product product : inventory) {
                 if (product.getId().equals(itemId)) {
                     cart.add(product);
                     System.out.println("Product has been added to the cart!");
-                    found=true; 
+                    found = true;
                     break;
                 }
             }
-        }else{
-            System.out.println("Okay bye");
-
-        }else{
-            System.out.println("item not found");
+            if (!found) {
+                System.out.println("Item not found.");
+            }
+        } else {
+            System.out.println("Okay");
         }
     }
-
-
-
-
-
-
 
 
     public static void displayCart(ArrayList<Product> cart, Scanner scanner, double totalAmount) {
@@ -150,8 +144,6 @@ public class Store {
         // the specified ID, and return the corresponding com.pluralsight.Product object. If
         // no product with the specified ID is found, the method should return
         // null.
-
-
 
         boolean found = false;
 
