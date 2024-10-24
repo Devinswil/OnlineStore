@@ -73,8 +73,9 @@ This workshop caused me so much stress I would rather not think about it for a w
 - https://github.com/RayMaroun
 
 ## Team Members
-n/a
+Cameron recommend that I should make a confirm purchase method instead of adding the scanner.
 ## Thanks
 
 
 - Thank you to Raymond for continuous support and guidance.
+- Thanks to Cameron for answering various questions I had.
