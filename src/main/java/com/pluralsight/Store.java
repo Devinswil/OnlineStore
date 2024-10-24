@@ -129,7 +129,11 @@ public class Store {
         String answer = scanner.nextLine().toLowerCase().trim();
         if (answer.equalsIgnoreCase("yes"))
             System.out.println("what is the id of item you would like to remove?");
-        
+            String removeItem = scanner.nextLine();
+        Product productToRemove = findProductById(removeItem, cart);
+            if (productToRemove !=null ){
+                cart.remove(removeItem);
+            }
         checkOut(cart, totalAmount, scanner);
     }
 
@@ -156,7 +160,7 @@ public class Store {
 
     }
 
-    public static void findProductById(String id, ArrayList<Product> inventory) {
+    public static Product findProductById(String id, ArrayList<Product> inventory) {
         // This method should search the inventory ArrayList for a product with
         // the specified ID, and return the corresponding com.pluralsight.Product object. If
         // no product with the specified ID is found, the method should return
@@ -173,7 +177,9 @@ public class Store {
         }
         if (!found) {
             System.out.println("Id not found!");
+
         }
+        return null;
     }
 
     public static boolean confirmPurchase(Scanner scanner) {
