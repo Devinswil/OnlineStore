@@ -119,11 +119,18 @@ public class Store {
         totalAmount = 0;
         for (Product product : cart) {
             System.out.println(cart);
-            checkOut(cart,totalAmount,scanner);
+
         }
-        if (cart.isEmpty()){
+        if (cart.isEmpty()) {
             System.out.println("Nothing in cart!");
+            return;
         }
+        System.out.println("Would you like to remove items from cart?");
+        String answer = scanner.nextLine().toLowerCase().trim();
+        if (answer.equalsIgnoreCase("yes"))
+            System.out.println("what is the id of item you would like to remove?");
+        
+        checkOut(cart, totalAmount, scanner);
     }
 
     public static void checkOut(ArrayList<Product> cart, double totalAmount, Scanner scanner) {
@@ -135,14 +142,15 @@ public class Store {
         for (Product product : cart) {
             totalAmount += product.getPrice();
 
+
         }
         System.out.println(totalAmount);
         boolean yes = confirmPurchase(scanner);
 
-        if (yes){
-            System.out.println("Purchase confirmed");
+        if (yes) {
+            System.out.println("Purchase confirmed " + totalAmount + " has been deducted from account");
             cart.clear();
-        } else{
+        } else {
             System.out.println("Purchased canceled");
         }
 
