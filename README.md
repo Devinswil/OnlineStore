@@ -1,10 +1,9 @@
-# Project Title
+# Devin's Online Store
 
 ## Description of the Project
+My online store is an application that allows users to shop online to find various products and purchase them with ease. 
+One of the main features of my application is that users have a constant reminder of the total cost of their cart and items, as well as the ability to add and remove items from the cart.
 
-Briefly describe what this Java console application does. Mention its purpose and who the intended users are. Explain the main functionality and what problems it aims to solve.
-
-![Class Diagram](path/to/your/class_diagram.png)
 
 ## User Stories
 
