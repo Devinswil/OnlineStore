@@ -116,7 +116,7 @@ public class Store {
         // prompt the user to remove items from their cart by entering the ID
         // of the product they want to remove. The method should update the cart ArrayList and totalAmount
         // variable accordingly.
-       // totalAmount = 0;
+      // totalAmount = 0;
         for (Product product : cart) {
             System.out.println(product);
             totalAmount += product.getPrice();
@@ -128,8 +128,8 @@ public class Store {
             System.out.println("Nothing in cart!");
             return;
         }
-        System.out.println("Cart Total " + totalAmount);
-        System.out.println("Would you like to remove items from cart?");
+        System.out.printf("Cart Total: $%.2f%n", totalAmount);
+        System.out.println("Would you like to remove items from cart? yes or no");
         String answer = scanner.nextLine().toLowerCase().trim();
         if (answer.equalsIgnoreCase("yes")) {
             System.out.println("What is the ID of the item you would like to remove?");
@@ -138,7 +138,9 @@ public class Store {
             //!= null because we set null if product id was not able to be found
             if (productToRemove != null) {
                 cart.remove(productToRemove);
+               // totalAmount -=productToRemove.getPrice();
                 System.out.println("Product removed from cart.");
+
             } else {
                 System.out.println("Item not found.");
             }
@@ -154,13 +156,9 @@ public class Store {
         // and display a summary of the purchase to the user. The method should
         // prompt the user to confirm the purchase, and deduct the total cost
         // from their account if they confirm.
-        
-        for (Product product : cart) {
-            totalAmount += product.getPrice();
 
 
-        }
-        System.out.println(totalAmount);
+        //System.out.println(totalAmount);
         boolean yes = confirmPurchase(scanner);
 
         if (yes) {

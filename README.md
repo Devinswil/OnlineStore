@@ -7,14 +7,23 @@ One of the main features of my application is that users have a constant reminde
 
 ## User Stories
 
-List the user stories that guided the development of your application. Format these stories as: "As a [type of user], I want [some goal] so that [some reason]."
-
-- As a user, I want to be able to input my data, so that the application can process it accordingly.
-- As a user, I want to receive immediate feedback, so I can understand what to do next.
+-As an owner I would like to be able to view all the inventory with the push of a button. This will make it easier for me to shop and see everything together.
+-As a user I would like to be able to see all the product information together easily and displayed. This will make it easy on the user to know what they are looking at.
+-As a user I would like to be able to add items to my cart once I have had the ability to look at all the products. This will allow me to view and shop at the same time.
+-As the user I would like all the items I want to be stored in one area, so I can have access to it.
+-As a user I would like to be able to see all the items I have added to my cart.
+-As a user I would like to be able to remove items from cart too if I change my mind on it.
+-As the user I would like to be able to search products by the Id just to make it easier to search.
+-As a user I would like to see the total cost of all the things I would like to buy to make it easier to budget.
+-As the owner I would like to ask user if they would like to confirm the purchase, so no accidental purchases are made.
 
 ## Setup
 
-Instructions on how to set up and run the project using IntelliJ IDEA.
+First step would be showing all products which can be down by entering 1
+Second step would to select if you would like to add an item to the cart then entering the product id number
+Third step would be to show cart in order to begin check out
+here you will be prompted to remove items if you would like 
+if no items are removed purchase will be continued 
 
 ### Prerequisites
 
@@ -33,14 +42,18 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 ## Technologies Used
 
-- Java: Mention the version you are using.
-- Any additional libraries or frameworks used in the project.
+- IntelliJ IDEA Community Edition 2022.3.2
+- Java 17
 
 ## Demo
 
 Include screenshots or GIFs that show your application in action. Use tools like [Giphy Capture](https://giphy.com/apps/giphycapture) to record a GIF of your application.
-
-![Application Screenshot](path/to/your/screenshot.png)
+Added item to cart
+![img.png](img.png)****
+Removed item from cart 
+![img_1.png](img_1.png)
+Confirmed purchase
+![img_2.png](img_2.png)
 
 ## Future Work
 
