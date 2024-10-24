@@ -116,25 +116,30 @@ public class Store {
         // prompt the user to remove items from their cart by entering the ID
         // of the product they want to remove. The method should update the cart ArrayList and totalAmount
         // variable accordingly.
-        totalAmount=0;
+        totalAmount = 0;
         for (Product product : cart) {
             System.out.println(cart);
-            totalAmount += product.getPrice();
-            System.out.println(totalAmount);
-
+            checkOut(cart,totalAmount,scanner);
         }
     }
 
-    public static void checkOut(ArrayList<Product> cart, double totalAmount) {
+    public static void checkOut(ArrayList<Product> cart, double totalAmount, Scanner scanner) {
         // This method should calculate the total cost of all items in the cart,
         // and display a summary of the purchase to the user. The method should
         // prompt the user to confirm the purchase, and deduct the total cost
         // from their account if they confirm.
-        totalAmount=0;
+        totalAmount = 0;
         for (Product product : cart) {
-           totalAmount += product.getPrice();
-            System.out.println(totalAmount);
+            totalAmount += product.getPrice();
 
+        }
+        System.out.println(totalAmount);
+        boolean yes = confirmPurchase(scanner);
+
+        if (yes){
+            System.out.println("Purchase confirmed");
+        } else{
+            System.out.println("Purchased canceled");
         }
 
     }
@@ -157,5 +162,11 @@ public class Store {
         if (!found) {
             System.out.println("Id not found!");
         }
+    }
+
+    public static boolean confirmPurchase(Scanner scanner) {
+        System.out.println("Would you like to confirm purchase? yes or no?");
+        String answer = scanner.nextLine().trim().toLowerCase();
+        return answer.equalsIgnoreCase("yes");
     }
 }
