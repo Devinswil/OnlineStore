@@ -119,6 +119,8 @@ public class Store {
         totalAmount = 0;
         for (Product product : cart) {
             System.out.println(cart);
+            totalAmount += product.getPrice();
+            System.out.println("Cart Total " + totalAmount);
 
         }
         if (cart.isEmpty()) {
@@ -129,13 +131,20 @@ public class Store {
         String answer = scanner.nextLine().toLowerCase().trim();
         if (answer.equalsIgnoreCase("yes"))
             System.out.println("what is the id of item you would like to remove?");
-            String removeItem = scanner.nextLine();
+        String removeItem = scanner.nextLine();
         Product productToRemove = findProductById(removeItem, cart);
-            if (productToRemove !=null ){
-                cart.remove(removeItem);
-            }
-        checkOut(cart, totalAmount, scanner);
+        if (productToRemove != null) {
+            //added to change price
+            // for (Product product : cart) {
+            // totalAmount -= product.getPrice();
+            // System.out.println("Cart total" + totalAmount);
+            cart.remove(productToRemove);
+            System.out.println("product removed from cart");
+
+        }
     }
+    //checkOut(cart, totalAmount, scanner);
+    //  }
 
     public static void checkOut(ArrayList<Product> cart, double totalAmount, Scanner scanner) {
         // This method should calculate the total cost of all items in the cart,
@@ -166,23 +175,21 @@ public class Store {
         // no product with the specified ID is found, the method should return
         // null.
 
-        boolean found = false;
 
         for (Product product : inventory) {
             if (product.getId().equals(id)) {
                 System.out.println(product);
-                found = true;
+                return product;
 
             }
         }
-        if (!found) {
-            System.out.println("Id not found!");
 
-        }
+        System.out.println("Id not found!");
         return null;
     }
 
     public static boolean confirmPurchase(Scanner scanner) {
+        //added method because there was no scanner in checkOut
         System.out.println("Would you like to confirm purchase? yes or no?");
         String answer = scanner.nextLine().trim().toLowerCase();
         return answer.equalsIgnoreCase("yes");
