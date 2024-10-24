@@ -121,6 +121,9 @@ public class Store {
             System.out.println(cart);
             checkOut(cart,totalAmount,scanner);
         }
+        if (cart.isEmpty()){
+            System.out.println("Nothing in cart!");
+        }
     }
 
     public static void checkOut(ArrayList<Product> cart, double totalAmount, Scanner scanner) {
@@ -138,6 +141,7 @@ public class Store {
 
         if (yes){
             System.out.println("Purchase confirmed");
+            cart.clear();
         } else{
             System.out.println("Purchased canceled");
         }
